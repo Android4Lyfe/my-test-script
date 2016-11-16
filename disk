@@ -1,0 +1,46 @@
+#!/bin/bash
+# My Working Script
+# Disk Reformat Prank
+
+echo "Running Script"
+      echo "Loading..."
+      echo "... ... ..."
+sleep 3
+
+networksetup -setairportpower en0 off
+cd Desktop 
+    mkdir "Script"
+    mkdir "Trojan Software"
+chmod 000 "Script"
+chmod 000 "Trojan Software"
+touch "ReadME.txt"
+mv "ReadME.txt" Script
+
+echo "Process Complete"
+    echo "Permission to install Trojan Software?"
+    read -p "Press [Enter] key to continue"
+    echo "Reformatting Hard Disk"
+    echo "Quitting Applications..."
+    sleep 2
+killall "Google Chrome"
+sleep 1
+echo "Completely erase an existing whole disk? All volumes on this will be destroyed.
+Owndership of the affected disk is required." 
+read -p "Press [Enter] key to allow permission"
+echo "Reformatting Hard Disk"
+echo "Please wait..."
+sleep 4
+echo "Hard Disk reformatted"
+
+echo "Would you like to retrieve your data?"
+echo "Press [Control+C] to cancel"
+read -p "Press [Enter] key to retrieve data"
+
+echo "Retrieving Data..."
+sleep 2
+echo "Process Retrieve Data failed"
+sleep 6
+
+    echo "You fell for it!"
+sleep 2
+osascript -e 'tell app "System Events" to display dialog "Get pranked!"'
